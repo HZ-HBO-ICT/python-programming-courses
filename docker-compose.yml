@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    notebook:
+        image: 'jupyter/scipy-notebook'
+        ports:
+            - '8888:8888'
+        volumes:
+            - .:/home/jovyan/work
+            - ./custom.css:/home/jovyan/.jupyter/custom/custom.css
